@@ -37,6 +37,7 @@ app.listen(PORT, () => {
 });
 
 const recipeRoutes = require("./routes/recipeRoutes");
-
-// Add this alongside your auth route:
 app.use("/api/recipes", recipeRoutes);
+
+const favoriteRoutes = require("./routes/favoriteRoutes");
+app.use("/api/favorites", favoriteRoutes);
